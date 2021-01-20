@@ -1,2 +1,2 @@
 # dyzgcomp
-戴颖组件库
+daiying组件库
