@@ -1,2 +1,2 @@
 # dyzgcomp
-daiying组件库
+dy组件库
