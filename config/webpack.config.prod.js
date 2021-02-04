@@ -130,7 +130,8 @@ module.exports = {
     bail: true,
     // We generate sourcemaps in production. This is slow but gives good results.
     // You can exclude the *.map files from the build during deployment.
-    devtool: shouldUseSourceMap ? 'source-map' : false,
+    // devtool: shouldUseSourceMap ? 'source-map' : false,
+    devtool: false,
     // In production, we only want to load the polyfills and the app code.
     entry: [require.resolve('./polyfills'), paths.appIndexJs],
     output: {
@@ -149,7 +150,7 @@ module.exports = {
             path
                 .relative(paths.appSrc, info.absoluteResourcePath)
                 .replace(/\\/g, '/'),
-    libraryTarget: "umd",
+    libraryTarget: "umd",//umd
     library: "yzgtest_react"
     },
     resolve: {
@@ -192,13 +193,13 @@ module.exports = {
 
             // First, run the linter.
             // It's important to do this before Babel processes the JS.
-            {
-                test:require.resolve('jquery'),
-                use: [{
-                    loader: 'expose-loader',
-                    options: 'jQuery'
-                }]
-            },
+            // {
+            //     test:require.resolve('jquery'),
+            //     use: [{
+            //         loader: 'expose-loader',
+            //         options: 'jQuery'
+            //     }]
+            // },
             {
                 test: /\.(js|jsx|mjs)$/,
                 enforce: 'pre',

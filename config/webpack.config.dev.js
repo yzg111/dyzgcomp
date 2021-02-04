@@ -189,13 +189,13 @@ module.exports = {
 
             // First, run the linter.
             // It's important to do this before Babel processes the JS.
-            {
-                test: require.resolve('jquery'),
-                use: [{
-                    loader: 'expose-loader',
-                    options: 'jQuery'
-                }]
-            },
+            // {
+            //     test: require.resolve('jquery'),
+            //     use: [{
+            //         loader: 'expose-loader',
+            //         options: 'jQuery'
+            //     }]
+            // },
             {
                 test: /\.(js|jsx|mjs)$/,
                 enforce: 'pre',
